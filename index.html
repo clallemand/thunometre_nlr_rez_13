@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Questionnaire du thunomètre" />
+    <title>Le thunomètre</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="eyebrow">Outil d'autopositionnement</p>
+      <h1>Le thunomètre</h1>
+      <p class="intro">
+        Réponds à chaque question pour obtenir ton point sur le thunomètre.
+        Tes réponses restent uniquement dans ton navigateur.
+      </p>
+    </header>
+
+    <main>
+      <form id="questionnaire" novalidate>
+        <div id="sections"></div>
+        <p id="form-error" class="form-error" role="alert" hidden></p>
+        <button class="calculate" type="submit">Calculer mon résultat</button>
+      </form>
+
+      <section id="result" class="result" aria-live="polite" tabindex="-1" hidden>
+        <p class="eyebrow">Ton point sur le thunomètre</p>
+        <output id="score">0</output>
+        <p>Tu peux maintenant reporter ce nombre dans le document de la tournée.</p>
+        <button id="restart" class="restart" type="button">Recommencer</button>
+      </section>
+    </main>
+
+    <footer>
+      Calcul effectué localement d'après le fichier <code>Thunomètre.xlsx</code>.
+    </footer>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
