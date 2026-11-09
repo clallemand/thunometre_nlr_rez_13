@@ -11,6 +11,6 @@ export function calculateScore(income, weightedAnswers) {
     throw new TypeError("Les réponses doivent être des nombres valides.");
   }
 
-  const weightedTotal = answers.reduce((total, answer) => total + answer, numericIncome);
+  const weightedTotal = answers.reduce((total, answer) => total + answer, numericIncome/4);
   return roundDown(weightedTotal / 10);
 }
